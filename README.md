@@ -70,3 +70,4 @@ Replace SIEMBerry_IP with the IP of the Pi if you don't roll your own DNS server
 - Add a solutions considered section (why isn't this using SecurityOnion, etc)  
 - Think about Caddy  
 - Think about Ansible  
+- Think about having an installer and a running config updater  
