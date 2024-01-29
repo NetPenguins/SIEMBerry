@@ -9,6 +9,7 @@ Please I don't want to be complicit in an `rm -rf /` of prod on a Monday morning
 ## Instructions  
 Use `get clone` to download this script  
 Review the contents of the newly downloaded `ESBootstrap.sh` script  
+Change [this](https://github.com/ScioShield/SIEMBerry/blob/c67e85b8768ab151d1a2960c02d8d3da37026aa8/ESBootstrap.sh#L38) line to be the IP address of your Raspberry Pi! If you do not do this it may break the certificate settings.  
 Install with `sudo bash ESBootstrap.sh`  
 Take note of the password and tokens at the end!  
 If you didn't save this password you can reset the Elastic user password with this command
