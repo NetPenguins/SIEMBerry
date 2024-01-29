@@ -87,3 +87,4 @@ Replace SIEMBerry_IP with the IP of the Pi if you don't roll your own DNS server
 - Think about Ansible  
 - Think about having an installer and a running config updater  
 - Raise a discuss post regarding why the Agent doesn't work properly on Arm / Raspberry Pis  
+- The [DNS](https://github.com/ScioShield/SIEMBerry/blob/c67e85b8768ab151d1a2960c02d8d3da37026aa8/ESBootstrap.sh#L47) line should not append it every time the script is ran  
