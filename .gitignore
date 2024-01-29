@@ -1,0 +1,4 @@
+.vagrant/*
+.vscode/*
+Password.txt
+notes.txt
