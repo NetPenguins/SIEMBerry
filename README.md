@@ -85,3 +85,4 @@ Replace SIEMBerry_IP with the IP of the Pi if you don't roll your own DNS server
 - Think about Caddy  
 - Think about Ansible  
 - Think about having an installer and a running config updater  
+- Raise a discuss post regarding why the Agent doesn't work properly on Arm / Raspberry Pis  
