@@ -12,9 +12,9 @@ Review the contents of the newly downloaded `ESBootstrap.sh` script
 Install with `sudo bash ESBootstrap.sh`  
 Take note of the password and tokens at the end!  
 If you didn't save this password you can reset the Elastic user password with this command
-on the Pi:
+on the Pi:  
 `sudo /usr/share/elasticsearch/bin/elasticsearch-reset-password -u elastic`  
-To access your new SIEM go to https://siemberry.home.arpa:5601 once you have run the installer script and added the DNS record to your DNS servers or hosts, host file. Ignore the certificate warning we are using self-signed certs by design.  
+To access your new SIEM go to https://siemberry.home.arpa:5601 once you have run the installer script and added the DNS record to your DNS servers or hosts, host file.   Ignore the certificate warning we are using self-signed certs by design.  
 I would advise you also use an external drive, how Elasticsearch writes to disk may not be ideal for an SD card.  
 
 ## Explanation
