@@ -35,13 +35,22 @@ mkdir -p /etc/pki/fleet
 cp /opt/elastic/ca.crt /etc/pki/fleet/ca.crt
 
 # Check if Elasticsearch is reachable 
+counter=0
 kcheck=$(curl -L --silent --output /dev/null --cacert /opt/elastic/ca.crt -XGET "https://$DNS:9200" --write-out %{http_code})
-until [ $kcheck -eq 401 ]
+until [ $kcheck -eq 401 ] || [ $counter -eq 12 ]
 do
   echo "Checking if Elasticsearch is reachable, retrying..."
   sleep 5
+  counter=$((counter+1))
+  kcheck=$(curl -L --silent --output /dev/null --cacert /opt/elastic/ca.crt -XGET "https://$DNS:9200" --write-out %{http_code})
 done
-echo "Elasticsearch is reachable"
+
+if [ $kcheck -eq 401 ]; then
+  echo "Elasticsearch is reachable"
+else
+  echo "Elasticsearch is not reachable after 1 minute"
+  exit 1
+fi
 
 # Install the agent
 sudo /opt/elastic/elastic-agent-$VER-linux-arm64/elastic-agent install -f \
