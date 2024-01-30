@@ -34,7 +34,7 @@ tar xf /opt/elastic/elastic-agent-$VER-linux-arm64.tar.gz -C /opt/elastic/
 mkdir -p /etc/pki/fleet
 cp /opt/elastic/ca.crt /etc/pki/fleet/ca.crt
 
-# Check if Kibana is reachable 
+# Check if Elasticsearch is reachable 
 kcheck=$(curl -L --silent --output /dev/null --cacert /opt/elastic/ca.crt -XGET "https://$DNS:9200" --write-out %{http_code})
 until [ $kcheck -eq 401 ]
 do

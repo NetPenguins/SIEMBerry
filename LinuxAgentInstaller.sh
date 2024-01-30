@@ -34,14 +34,14 @@ tar xf /opt/elastic/elastic-agent-$VER-linux-x86_64.tar.gz -C /opt/elastic/
 mkdir -p /etc/pki/fleet
 cp /opt/elastic/ca.crt /etc/pki/fleet/ca.crt
 
-# Check if Kibana is reachable 
-kcheck=$(curl -L --silent --output /dev/null --cacert /opt/elastic/ca.crt -XGET "https://$DNS:5601" --write-out %{http_code})
-until [ $kcheck -eq 200 ]
+# Check if Elasticsearch is reachable 
+kcheck=$(curl -L --silent --output /dev/null --cacert /opt/elastic/ca.crt -XGET "https://$DNS:9200" --write-out %{http_code})
+until [ $kcheck -eq 401 ]
 do
-  echo "Checking if Kibana is reachable, retrying..."
+  echo "Checking if Elasticsearch is reachable, retrying..."
   sleep 5
 done
-echo "Kibana is reachable"
+echo "Elasticsearch is reachable"
 
 # Install the agent
 sudo /opt/elastic/elastic-agent-$VER-linux-x86_64/elastic-agent install -f \
