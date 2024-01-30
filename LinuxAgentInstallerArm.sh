@@ -31,7 +31,7 @@ fi
 tar xf /opt/elastic/elastic-agent-$VER-linux-arm64.tar.gz -C /opt/elastic/
 
 # make the cert dir
-mkdir /etc/pki/fleet
+mkdir -p /etc/pki/fleet
 cp /opt/elastic/ca.crt /etc/pki/fleet/ca.crt
 
 # Check if Kibana is reachable 
