@@ -1,7 +1,7 @@
 # SIEMBerry 
 Run the Elastic Stack on a Raspberry Pi.  
 ## Note  
-This has been tested for Elastic 8.12.0 on Ubuntu 20.04/23.10 on the Raspberry Pi 4B and Pi 5 YMMV with other distros and platforms.
+This has been tested for Elastic 8.12.0 on Ubuntu 20.04/22.04/23.10 on the Raspberry Pi 4B and Pi 5 YMMV with other distros and platforms.
 
 **This is not for production!**  
 Please I don't want to be complicit in an `rm -rf /` of prod on a Monday morning/Friday afternoon at 17:30, thank you.  
