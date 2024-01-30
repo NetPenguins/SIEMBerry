@@ -69,7 +69,7 @@ We automatically enable all alerts for the Windows and Linux platforms (or at le
 The fleet server is then enabled by installing the Elastic Agent with specific settings.
 
 #### Enrollment Tokens
-We place them in the ./tokens dir and print them. You will also need the CA cert located in the ./certs/ dir to enroll new agents. Here is an example for Windows(TBD) here is an example for [Linux](https://github.com/ScioShield/SIEMBerry/blob/bd0e227435356737592e07801b43fa69cf2cb859/LinuxAgentInstaller.sh#L38).  
+We place them in the ./tokens dir and print them. You will also need the CA cert located in the ./certs/ dir to enroll new agents. Here is an example for Windows(TBD) here is an example for [Linux](https://github.com/ScioShield/SIEMBerry/blob/bd0e227435356737592e07801b43fa69cf2cb859/LinuxAgentInstaller.sh#L47).  
 
 
 ## DNS settings  
