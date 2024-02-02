@@ -57,9 +57,3 @@ sudo /opt/elastic/elastic-agent-$VER-linux-x86_64/elastic-agent install -f \
   --url=https://$DNS:8220 \
   --enrollment-token=$(cat /opt/elastic/LAEtoken.txt) \
   --certificate-authorities=/opt/elastic/ca.crt
-
-# Cleanup
-for file in "/opt/elastic/LAEtoken.txt" "/opt/elastic/elastic-agent-$VER-linux-x86_64.tar.gz" "/opt/elastic/ca.crt"
-do
-    sudo rm -f "$file"
-done
