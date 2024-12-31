@@ -33,7 +33,7 @@ apt install -y unzip wget jq tar gettext dnsutils
 # We also pull the SHA512 hashes to verify the downloads
 
 # var settings
-export VER=8.12.0
+export VER=8.17.0
 # TO-DO Change this to the IP address of the Raspberry Pi
 export IP_ADDR=172.16.20.5
 export K_PORT=5601
